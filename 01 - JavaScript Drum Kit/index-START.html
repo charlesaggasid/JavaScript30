@@ -60,16 +60,17 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
   <script>
-    window.addEventListener('keydown', function (e) {
-      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //adding the animation
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); // we are selecting an audio element, and matching the data-key to 
+      //e.keycode(got this from consoling keydown e)
+      const key = document.querySelector(`.key[data-key="${e.keyCode}"]`); //select .key(and match data-key keyCode) adding the animation
 
       if (!audio) return; //stop the function from running all together
       audio.currentTime = 0; // rewind to the start
       audio.play(); //play the audio
 
-      key.classList.add('playing');
-    })
+      key.classList.add('playing'); //adding class of playing(with styles, yellow border)
+    }
 
     function removeTransition(e) {
       if (e.propertyName !== 'transform') return;
@@ -77,8 +78,15 @@
       console.log(this);
       this.classList.remove('playing');
     }
-    const keys = document.querySelectorAll('.key');
-    keys.forEach(key => key.addEventListener('transitionend', removeTransition)) //
+    const keys = document.querySelectorAll('.key'); //give out an array
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition)) // transition is from css
+    // 1. Loop through each node list and attach an event listener.
+    // 2. Listen for an event transitionEnd.
+    // 3. Remove transition.
+
+
+    window.addEventListener('keydown', playSound);
+    // attached event to window listening for keydown
 
   </script>
 
