@@ -1,0 +1,42 @@
+/* 
+font-family: 'Lato', sans-serif;
+font-family: 'Space Mono', monospace;
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .col {
+  border: 1px red solid;
+} */
+
+.header {
+  min-height: 40vh;
+  background: white;
+}
+
+.projects {
+  padding: 5rem 0px;
+  background: #e2e8f0;
+}
+
+.header-title {
+  font-family: "Lato", sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+}
+
+.header-underline {
+  border-bottom: 4px orange solid;
+}
+
+.header-paragraph {
+  font-family: "Space Mono", monospace;
+  font-size: 22px;
+
+  line-height: 2.5;
+  text-spac
+}
