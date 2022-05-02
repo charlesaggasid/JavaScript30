@@ -36,6 +36,5 @@ font-family: 'Space Mono', monospace;
 .header-paragraph {
   font-family: "Space Mono", monospace;
   font-size: 22px;
-
-  line-height: 2.5;
+  line-height: 2;
 }
